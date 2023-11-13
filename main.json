@@ -48,5 +48,37 @@
             "orderstop": "2023-11-06 19:28:51",
             "duration": 0
         }
+    ],
+    "signin_user": [
+        {
+            "id": 1,
+            "username": "razan",
+            "pass_hash": "$2b$12$9wIxqPYx2xH7Zc/njP6mbuvxN9pdALnqx2bk1fRNYBXJF3TuMrdlq"
+        },
+        {
+            "id": 2,
+            "username": "fred",
+            "pass_hash": "$2b$12$QLVnuDrmRjxCQPO6nU1JUeYClImdHQxiJ.JrWOziJ2cjjx1MZ5FZ6"
+        },
+        {
+            "id": 3,
+            "username": "vewe",
+            "pass_hash": "$2b$12$BcEsXt9xpn5erbmnFwX2lePbZGn6/jAigKkjTa6zc/Ps6IjptbZfO"
+        },
+        {
+            "id": 4,
+            "username": "odre",
+            "pass_hash": "$2b$12$Vq.lIN8dk/sZJdgUjZdnT.Ih05LohZ.SaUQxC.ZzibHaTMLQ2K9EK"
+        },
+        {
+            "id": 5,
+            "username": "bam",
+            "pass_hash": "$2b$12$N2ragPMFUvGcgqpio/fNduEZZk6EgyTQiMZ2j9VwSG02ml6/TClKi"
+        },
+        {
+            "id": 6,
+            "username": "halo",
+            "pass_hash": "$2b$12$gqhKkRSYJzs4YKyuYR1xee6Eo.8ukYqdDpoigoc/9QJFgTa46z6Fe"
+        }
     ]
 }
