@@ -79,6 +79,11 @@
             "id": 6,
             "username": "halo",
             "pass_hash": "$2b$12$gqhKkRSYJzs4YKyuYR1xee6Eo.8ukYqdDpoigoc/9QJFgTa46z6Fe"
+        },
+        {
+            "id": 7,
+            "username": "rehan",
+            "pass_hash": "$2b$12$ke/8aqukL0WLU0bR3b6A3.o78Gq6em673acQlR8yB7xZkT4iiY.aW"
         }
     ]
 }
