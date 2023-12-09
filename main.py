@@ -12,6 +12,9 @@ import requests
 from location import get_location
 from req import get_reservations
 from pymongo import MongoClient
+from fastapi.middleware.cors import CORSMiddleware
+
+
 
 client = MongoClient("mongodb+srv://vincentw:123@cluster0.juxshun.mongodb.net/?retryWrites=true&w=majority")
 db = client['coworking']
@@ -62,6 +65,15 @@ class signin_user:
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl='token')
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["*"],
+)
+
 JWT_SECRET = 'coworkingsecret'
 ALGORITHM = 'HS256'
 
@@ -125,7 +137,7 @@ async def get_user(user: signin_user = Depends(get_current_user)):
     return {'id': user.id, 'username': user.username}
 
 @user.get('/users')
-async def read_all_users(user: signin_user = Depends(get_current_user)):
+async def read_all_users():
 	return data['users']
 
 @loca.get('/test')
@@ -226,12 +238,13 @@ async def delete_order(orderid: int, user: signin_user = Depends(get_current_use
 	)
 
 @reserve.get('/reserve')
-async def get_reservasi(user: signin_user = Depends(get_current_user)):
+async def get_reservasi():
     list_reservasi = []
     for i in get_reservations():
-        list_reservasi.append(i)
+        list_reservasi.append({k:i[k]for k in ("id_table","hourstart")})
 
     return list_reservasi
+
 
 
 app.include_router(auth)
