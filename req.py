@@ -1,6 +1,6 @@
 import requests, json
 
-url = 'http://20.247.130.142/'
+url = 'http://40.119.238.184/'
 
 
 def get_token():
@@ -13,5 +13,3 @@ def get_reservations():
     headers = {'Authorization': f'Bearer {get_token()}'}
     reservations = requests.get(url+'reservations', headers=headers)
     return reservations.json()
-
-
